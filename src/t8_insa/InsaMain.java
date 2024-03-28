@@ -139,7 +139,7 @@ public class InsaMain extends JFrame {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				System.exit(0);
-		}
+			}
 		});
 		
 		// 종료 버튼 마우스 클릭시 수행

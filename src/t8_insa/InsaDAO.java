@@ -144,5 +144,31 @@ public class InsaDAO extends DBConn {
 		}
 		return vData;
 	}
+
+	public Vector getInsaList() {
+		Vector vData = new Vector<>();
+		
+		try {
+			sql = "select * from insa2 order by idx desc";
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				Vector vo = new Vector<>();
+				vo.add(rs.getInt("idx"));
+				vo.add(rs.getString("name"));
+				vo.add(rs.getInt("age"));
+				vo.add(rs.getString("gender"));
+				vo.add(rs.getString("ipsail").substring(0,10));
+				
+				vData.add(vo);
+			}
+		} catch (SQLException e) {
+			System.out.println("SQL 오류 : " + e.getMessage());
+		} finally {
+			rsClose();
+		}
+		return vData;
+	}
 	
 }

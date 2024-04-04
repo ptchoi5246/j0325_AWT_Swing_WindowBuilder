@@ -27,7 +27,7 @@ public class InsaSearch extends JFrame {
 	InsaDAO dao = new InsaDAO();
 	InsaVO vo = null;
 	int res = 0;
-
+	
 	public InsaSearch(InsaVO vo) {
 		super("회원가입창");
 		setSize(800, 600);

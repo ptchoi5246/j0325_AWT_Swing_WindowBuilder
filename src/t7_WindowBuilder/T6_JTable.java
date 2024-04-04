@@ -72,7 +72,7 @@ public class T6_JTable extends JFrame {
 		// JTable제작시는 '부제목' 과 '데이터'를 설계하여 Vector 타입으로 준비한다.
 		
 		// 1. '부제목'을 Vector에 저장
-		title = new Vector<>();
+		 title = new Vector<>();
 		title.add("번호");
 		title.add("성명");
 		title.add("나이");
